@@ -25,7 +25,7 @@ namespace Book_Store
                 builder.DataSource = "<cen4010group6.database.windows.net>";
                 builder.UserID = "<Group6>";
                 builder.Password = "<Cen401019>";
-                builder.InitialCatalog = "<your_database>";
+                builder.InitialCatalog = "<database>";
                 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
