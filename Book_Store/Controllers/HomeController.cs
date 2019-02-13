@@ -39,6 +39,15 @@ namespace Book_Store.Controllers
         public IActionResult Cart()
         {
             ViewData["Message"] = "This is the shopping cart.";
+            ViewData["book1title"] = "Book 1 title";
+            ViewData["author"] = "author";
+            ViewData["quantity"] = 3;
+            ViewData["bool"] = false;
+            ViewData["cost"] = 2;
+
+
+
+
 
             return View();
         }

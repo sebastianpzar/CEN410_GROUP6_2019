@@ -4,5 +4,73 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Testing .. Use this area to provide additional information.</p>
+<div class="container">
+    <ul>
+        @for(int i = 0; i < 3; i++){
+        <li style="list-style-type: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h3> @ViewData["book1title"]</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><span style="color: grey;">AUTHOR:</span> @ViewData["author"]</p>
+                    <p class="card-text"><span style="color: grey;">COST:</span> @ViewData["cost"]</p>
+                    <a href="#" class="btn btn-primary">Remove</a>
+                    <a href="#" class="btn btn-primary">Save for later</a>
+
+                    <div style="float: right">
+                        <form>
+                            <p>Quantity</p>
+                            <input type="number" min="1" max="100">
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+    
+
+        </li>
+
+        }
+
+
+
+    </ul>
+</div>
+
+<div id ="payment" class="container">
+    <h3> Subtotal</h3>
+</div>
+
+<div class="container">
+    <h3>Saved for later</h3>
+    <ul>
+        @for (int i = 0; i < 3; i++)
+    {
+        <li style="list-style-type: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h3> @ViewData["book1title"]</h3>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text"><span style="color: grey;">AUTHOR:</span> @ViewData["author"]</p>
+                    <p class="card-text"><span style="color: grey;">COST:</span> @ViewData["cost"]</p>
+                    <a href="#" class="btn btn-primary">Remove</a>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                   
+                </div>
+            </div>
+
+
+        </li>
+
+}
+
+
+
+    </ul>
+</div>
+
 
